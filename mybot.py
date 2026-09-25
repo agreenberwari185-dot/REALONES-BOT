@@ -59,7 +59,7 @@ TOKEN = os.environ.get('TOKEN')
 
 # ئەگەر ل سەر کۆمپیوتەری بی و TOKEN نەبوو، ڤێ تۆکنێ ب کار دئینیت
 if not TOKEN:
-    TOKEN = 'MTQ4NTc0Mzk2OTMxNTg0ODIzOQ.GkZIJU.MtzdZmn18lrScT3__PPd0N20UuuLWHl52xfrWU'
+    TOKEN = 'MTQ4NTc0Mzk2OTMxNTg0ODIzOQ.GxX0uU.sGErvgT9GW7Bf1PEpChg6QejxvaqxO2NB2qLPQ'
 
 intents = discord.Intents.default()
 intents.message_content = True 
@@ -368,7 +368,7 @@ async def clearall(ctx, amount: int = 100):
 
 # ئایدییێن رۆلان ل ڤێرە دابنێ
 WARN_ROLE_ID = 1488661667100233902  # ئایدییا رۆلێ Warned
-STAFF_ROLE_ID = 1462582644956205086 # ئایدییا ئەو رۆلێ دشێت وارنینگێ بدەت
+STAFF_ROLE_ID = 1550540679867011072 # ئایدییا ئەو رۆلێ دشێت وارنینگێ بدەت
 
 @bot.command(name="warn")
 async def warn(ctx, member: discord.Member, *, reason="No reason provided"):
@@ -586,7 +586,7 @@ async def on_message(message):
 
     # --- تنظیمات ---
     TRIGGER_WORD = "reklam" # ئەو پەیڤا تە دڤێت
-    ROLE_ID_1 = 1462582644956205086  # ئایدییا ڕۆڵێ ئێکێ (Staff / Admin)
+    ROLE_ID_1 = 1550540679867011072  # ئایدییا ڕۆڵێ ئێکێ (Staff / Admin)
     ROLE_ID_2 =1111111111111111111  # 👈 ل ڤێرە ئایدییا ڕۆڵێ دووێ دابنێ
     CHANNEL_ID = 1364674414091698176 # ئایدییا وی کەناڵێ تە دڤێت کوماندا تێدا کار بکەت
 
