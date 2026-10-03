@@ -59,7 +59,7 @@ TOKEN = os.environ.get('TOKEN')
 
 # ئەگەر ل سەر کۆمپیوتەری بی و TOKEN نەبوو، ڤێ تۆکنێ ب کار دئینیت
 if not TOKEN:
-    TOKEN = 'MTQ4NTc0Mzk2OTMxNTg0ODIzOQ.GxX0uU.sGErvgT9GW7Bf1PEpChg6QejxvaqxO2NB2qLPQ'
+    TOKEN = ''
 
 intents = discord.Intents.default()
 intents.message_content = True 
@@ -185,7 +185,13 @@ async def unban(ctx, user_id: str): # مە کرە سترینگ دا ئەڕۆڕا
         )
         await ctx.send(embed=error_embed)
 
-# 3. counting 
+# 3. invite 
+@bot.event
+async def on_member_join(member):
+    print(f"--> Test: Member Joined: {member.name}")
+    welcome_channel = member.guild.get_channel(1357365661369893044)
+    if welcome_channel:
+        await welcome_channel.send(f"Test Welcome: {member.mention}")
 
 # 5. Clear Command
 @bot.command()
